@@ -1,0 +1,93 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+
+@import '@fontsource/poppins/300.css';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+
+@layer base {
+	/* 1. Use a more-intuitive box-sizing model */
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	/* 2. Remove default margin */
+	* {
+		margin: 0;
+	}
+
+	:root {
+		--font-serif: 'Poppins', sans-serif;
+		--radius: 1rem;
+		--padding-inline: clamp(1rem, 5vw, 3rem);
+		color-scheme: light;
+	}
+
+	[data-theme = 'dark'] {
+		color-scheme: dark;
+	}
+
+	body {
+		/* 3. Add accessible line-height */
+		line-height: 1.5;
+		/* 4. Improve text rendering */
+		-webkit-font-smoothing: antialiased;
+	}
+
+	/* 5. Improve media defaults */
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	/* 6. Inherit fonts for form controls */
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	/* 7. Avoid text overflows */
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	/* 8. Improve line wrapping */
+	p {
+		text-wrap: pretty;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-serif;
+	}
+
+	/*
+    9. Create a root stacking context
+  */
+	#root,
+	#__next {
+		isolation: isolate;
+	}
+}
