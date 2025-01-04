@@ -1,15 +1,22 @@
+<script lang="ts">
+	type Props = {
+		width: number;
+		height: number;
+	};
+	let { width, height }: Props = $props();
+</script>
+
 <label class="grid cursor-pointer place-items-center">
 	<input
 		type="checkbox"
-		value="synthwave"
 		class="theme-controller toggle col-span-2 col-start-1 row-start-1 bg-base-content"
 		onclick={window?.toggleTheme}
 	/>
 	<svg
 		class="col-start-1 row-start-1 fill-base-100 stroke-base-100"
 		xmlns="http://www.w3.org/2000/svg"
-		width="14"
-		height="14"
+		{width}
+		{height}
 		viewBox="0 0 24 24"
 		fill="none"
 		stroke="currentColor"

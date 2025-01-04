@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PrimaryBtn from '$components/PrimaryBtn.svelte';
-	import ThemeSwicther from './ThemeSwicther.svelte';
+	import ThemeSwicther from './ThemeSwitcher.svelte';
 </script>
 
 <div class="navbar bg-base-100">
@@ -12,7 +12,7 @@
 			<li><a href="/">About</a></li>
 			<li>
 				<!-- <PrimaryBtn onclick={window?.toggleTheme} class="btn btn-outline">mode</PrimaryBtn> -->
-				<ThemeSwicther />
+				<ThemeSwicther width={14} height={14} />
 			</li>
 		</ul>
 	</div>

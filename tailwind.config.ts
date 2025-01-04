@@ -13,7 +13,7 @@ const themesOverride = {
 
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	darkMode:['selector','[data-theme="dark"]'],
+	darkMode: ['selector', '[data-theme="dark"]'],
 	theme: {
 		fontFamily: {
 			sans: [...fontFamily.sans],
@@ -24,11 +24,18 @@ export default {
 			center: true,
 			padding: 'var(--padding-inline)'
 		},
-		extend: {}
+		extend: {
+			boxShadow: {
+				'3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)'
+			}
+		}
 	},
 	daisyui: {
-												// ... mean access all properties 
-		themes: [{ light: { ...themes.valentine, ...themesOverride } }, { dark: { ...themes.sunset,...themesOverride } }]
+		// ... mean access all properties
+		themes: [
+			{ light: { ...themes.valentine, ...themesOverride } },
+			{ dark: { ...themes.sunset, ...themesOverride } }
+		]
 	},
 
 	plugins: [typography, daisyui]
