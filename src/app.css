@@ -27,10 +27,14 @@
 		--font-serif: 'Poppins', sans-serif;
 		--radius: 1rem;
 		--padding-inline: clamp(1rem, 5vw, 3rem);
+	}
+	/* light theme setup */
+	:root {
 		color-scheme: light;
 	}
 
-	[data-theme = 'dark'] {
+	/* dark theme setup */
+	[data-theme='dark'] {
 		color-scheme: dark;
 	}
 

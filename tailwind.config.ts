@@ -4,9 +4,16 @@ import type { Config } from 'tailwindcss';
 import daisyui from 'daisyui';
 import themes from 'daisyui/src/theming/themes';
 
+const themesOverride = {
+	'--rounded-box': 'var(--radius)', // border radius rounded-box utility class, used in card and other large boxes
+	'--rounded-btn': 'var(--radius)', // border radius rounded-btn utility class, used in buttons and similar element
+	'--rounded-badge': 'var(--radius)', // border radius rounded-badge utility class, used in badges and similar
+	'--tab-radius': 'calc(var(--radius) * 2)'
+};
+
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
+	darkMode:['selector','[data-theme="dark"]'],
 	theme: {
 		fontFamily: {
 			sans: [...fontFamily.sans],
@@ -20,7 +27,8 @@ export default {
 		extend: {}
 	},
 	daisyui: {
-		themes: [{ light: { ...themes.valentine } }, { dark: { ...themes.aqua } }]
+												// ... mean access all properties 
+		themes: [{ light: { ...themes.valentine, ...themesOverride } }, { dark: { ...themes.sunset,...themesOverride } }]
 	},
 
 	plugins: [typography, daisyui]

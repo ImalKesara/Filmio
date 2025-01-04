@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '$components/Header.svelte';
 	import PrimaryBtn from '$components/PrimaryBtn.svelte';
 	import { Hero, Pets } from '$lib';
 	const pets = [
@@ -13,5 +14,6 @@
 	];
 </script>
 
+<Header />
 <Hero />
 <Pets {pets} />
