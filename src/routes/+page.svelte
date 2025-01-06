@@ -13,9 +13,6 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Filmio</title>
-</svelte:head>
 <Header />
 <Hero />
 <Pets {...data} />
