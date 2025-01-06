@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PrimaryBtn from '$components/PrimaryBtn.svelte';
+
 	let { title, overview, poster_path } = $props();
 </script>
 
@@ -15,7 +16,7 @@
 		<h2 class="card-title">{title.slice(0,20)}</h2>
 		<p>{overview.slice(0, 100) + '...'}</p>
 		<div class="card-actions">
-			<PrimaryBtn class="btn btn-outline shadow-md ">Watch now</PrimaryBtn>
+			<PrimaryBtn class="btn btn-outline shadow-md ">Watch</PrimaryBtn>
 		</div>
 	</div>
 </div>
