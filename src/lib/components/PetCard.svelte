@@ -15,7 +15,7 @@
 		<h2 class="card-title">{title.slice(0,20)}</h2>
 		<p>{overview.slice(0, 100) + '...'}</p>
 		<div class="card-actions">
-			<PrimaryBtn class="btn btn-primary shadow-md ">Buy now</PrimaryBtn>
+			<PrimaryBtn class="btn btn-outline shadow-md ">Watch now</PrimaryBtn>
 		</div>
 	</div>
 </div>

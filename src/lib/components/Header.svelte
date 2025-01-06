@@ -4,7 +4,7 @@
 
 <div class="navbar text-sm bg-base-100">
 	<div class="flex-1">
-		<a href="/" class="btn btn-ghost">Movies</a>
+		<a href="/" class="btn btn-ghost">Filmio</a>
 	</div>
 	<div class="flex-none">
 		<ul class="flex gap-3 px-1 items-center">

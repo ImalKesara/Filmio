@@ -3,8 +3,8 @@ import { test, expect } from '@playwright/test';
 test('navigation smoke test', async ({ page }) => {
 	await page.goto('/');
 
-	await expect(page).toHaveTitle('Paulina Puppers');
-	await expect(page.getByRole('heading', { name: 'Paulina Puppers', level: 1 })).toBeVisible();
+	await expect(page).toHaveTitle('Filmio');
+	await expect(page.getByRole('heading', { name: 'Upcoming Movies', level: 1 })).toBeVisible();
 
 	// navigate to contact section
 	await page.getByRole('link', { name: 'contact' }).click();

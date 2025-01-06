@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-	<title>Paulina Puppers</title>
+	<title>Filmio</title>
 </svelte:head>
 <Header />
 <Hero />
