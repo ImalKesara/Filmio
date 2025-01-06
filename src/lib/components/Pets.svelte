@@ -2,17 +2,25 @@
 	import PetCard from './PetCard.svelte';
 
 	type Props = {
-		pets: { name: string }[];
+		upcomingMovies: {
+			id: number;
+			title: string;
+			overview: string;
+			release_date: string;
+			vote_average: number;
+			vote_count: number;
+			poster_path: string;
+			backdrop_path: string;
+		}[];
 	};
-	let { pets }: Props = $props();
+	let { upcomingMovies }: Props = $props();
 </script>
 
 <section class="container">
-	<h2 class="mb-4 text-4xl">Highlighted good boys and girls</h2>
 	<ul class="grid grid-cols-1 items-center justify-center gap-12 md:grid-cols-2 lg:grid-cols-3">
-		{#each pets as { name }}
+		{#each upcomingMovies as Movie }
 			<li>
-				<PetCard {name} />
+				<PetCard {...Movie} />
 			</li>
 		{/each}
 	</ul>

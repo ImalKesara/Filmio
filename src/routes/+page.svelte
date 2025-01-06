@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Hero, Pets,Header } from '$lib';
+	import { Hero, Pets, Header, Footer } from '$lib';
+	let { data } = $props();
 	const pets = [
 		{ name: 'Tom' },
 		{ name: 'Jerry' },
@@ -17,4 +18,5 @@
 </svelte:head>
 <Header />
 <Hero />
-<Pets {pets} />
+<Pets {...data} />
+<Footer />

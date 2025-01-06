@@ -1,22 +1,17 @@
 <script lang="ts">
 	import PrimaryBtn from '$components/PrimaryBtn.svelte';
-	let { name } = $props();
+	let  {title,overview,poster_path}  = $props();
 </script>
 
-<div class="card mx-auto w-96 bg-base-100 shadow-xl">
+<div class="card mx-auto mt-5 w-96 bg-base-100 shadow-xl">
 	<figure>
-		<img
-			src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-			alt="Pets"
-		/>
+		<img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt="Upcoming movies" />
 	</figure>
 	<div class="card-body items-center text-center">
-		<h2 class="card-title">{name}</h2>
-		<p>If a dog chews shoes whose shoes does he choose?</p>
+		<h2 class="card-title">{title}</h2>
+		<!-- <p>{overview.slice(0, 150) + '...'}</p> -->
 		<div class="card-actions">
-			<PrimaryBtn class="btn btn-secondary shadow-md">Buy now</PrimaryBtn>
+			<PrimaryBtn class="btn btn-primary shadow-md ">Buy now</PrimaryBtn>
 		</div>
 	</div>
 </div>
-
-

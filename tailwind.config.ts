@@ -34,7 +34,7 @@ export default {
 		// ... mean access all properties
 		themes: [
 			{ light: { ...themes.valentine, ...themesOverride } },
-			{ dark: { ...themes.sunset, ...themesOverride } }
+			{ dark: { ...themes.dracula, ...themesOverride } }
 		]
 	},
 
