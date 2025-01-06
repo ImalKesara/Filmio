@@ -4,3 +4,4 @@ export { default as PrimaryBtn } from './components/PrimaryBtn.svelte';
 export { default as Pets } from './components/Pets.svelte';
 export { default as PetCard } from './components/PetCard.svelte';
 export { default as Header } from './components/Header.svelte';
+export { default as ThemeToggleIcon } from './components/ThemeToggleIcon.svelte';

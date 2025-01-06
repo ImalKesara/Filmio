@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Header from '$components/Header.svelte';
-	import PrimaryBtn from '$components/PrimaryBtn.svelte';
-	import { Hero, Pets } from '$lib';
+	import { Hero, Pets,Header } from '$lib';
 	const pets = [
 		{ name: 'Tom' },
 		{ name: 'Jerry' },
@@ -14,6 +12,9 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Paulina Puppers</title>
+</svelte:head>
 <Header />
 <Hero />
 <Pets {pets} />

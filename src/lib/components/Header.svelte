@@ -1,18 +1,17 @@
 <script lang="ts">
-	import PrimaryBtn from '$components/PrimaryBtn.svelte';
-	import ThemeSwicther from './ThemeSwitcher.svelte';
+	import {PrimaryBtn,ThemeToggleIcon} from '$lib';
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar text-sm bg-base-100">
 	<div class="flex-1">
-		<a href="/" class="btn btn-ghost text-xl">Paulina Puppers</a>
+		<a href="/" class="btn btn-ghost">Paulina Puppers</a>
 	</div>
 	<div class="flex-none">
-		<ul class="flex gap-3 px-1">
+		<ul class="flex gap-3 px-1 items-center">
 			<li><a href="/">About</a></li>
 			<li>
 				<!-- <PrimaryBtn onclick={window?.toggleTheme} class="btn btn-outline">mode</PrimaryBtn> -->
-				<ThemeSwicther width={14} height={14} />
+				<ThemeToggleIcon width={14} height={14} />
 			</li>
 		</ul>
 	</div>
