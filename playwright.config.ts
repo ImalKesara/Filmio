@@ -26,16 +26,16 @@ export default defineConfig({
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Base URL to use in actions like `await page.goto('/')`. */
-		baseURL: process.env.PUBLIC_ROOT_URL || 'http://localhost:5173',
+		baseURL: 'http://localhost:5173',
 		// -> process.env.PUBLIC_ROOT_URL = hit this production deployment and run the tests there,and tell me if the actual app works
 
-		launchOptions:{
-			slowMo:parseInt(process.env.SLOW_MO || '0') //added by me
+		launchOptions: {
+			slowMo: parseInt(process.env.SLOW_MO || '0') //added by me
 		},
 
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 		trace: 'on-first-retry',
-		video:'retain-on-failure' // added by me ->every time a test fails u will have a video to see what ur app like
+		video: 'retain-on-failure' // added by me ->every time a test fails u will have a video to see what ur app like
 	},
 
 	/* Configure projects for major browsers */
