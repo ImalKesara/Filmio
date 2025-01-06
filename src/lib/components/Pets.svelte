@@ -14,13 +14,18 @@
 		}[];
 	};
 	let { upcomingMovies }: Props = $props();
+	for (let movie of upcomingMovies) {
+		console.log(movie.title);
+	}
 </script>
 
 <section class="container">
-	<ul class="grid grid-cols-1 items-center justify-center gap-12 md:grid-cols-2 lg:grid-cols-3">
-		{#each upcomingMovies as Movie }
+	<ul
+		class="grid grid-cols-1 items-center justify-items-center md:grid-cols-2 lg:grid-cols-3"
+	>
+		{#each upcomingMovies as { title, overview, poster_path }}
 			<li>
-				<PetCard {...Movie} />
+				<PetCard {title} {overview} {poster_path} />
 			</li>
 		{/each}
 	</ul>
