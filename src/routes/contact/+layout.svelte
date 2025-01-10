@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Header,Footer } from '$lib';
+	import { Header, Footer } from '$lib';
 	import type { Snippet } from 'svelte';
 	type Props = {
 		children: Snippet;
@@ -8,5 +8,7 @@
 </script>
 
 <Header />
-{@render children()}
+<main class="mt-16">
+	{@render children()}
+</main>
 <Footer />

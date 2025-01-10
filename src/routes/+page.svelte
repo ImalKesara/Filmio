@@ -4,6 +4,8 @@
 </script>
 
 <Header />
-<Hero />
-<Pets {data} />
+<main class="mt-[4.5rem]">
+	<Hero />
+	<Pets {data} />
+</main>
 <Footer />

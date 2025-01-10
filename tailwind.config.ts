@@ -34,7 +34,7 @@ export default {
 		// ... mean access all properties
 		themes: [
 			{ light: { ...themes.lofi, ...themesOverride } },
-			{ dark: { ...themes.luxury, ...themesOverride } }
+			{ dark: { ...themes.forest, ...themesOverride } }
 		]
 	},
 

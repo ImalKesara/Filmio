@@ -2,7 +2,7 @@
 	import {PrimaryBtn,ThemeToggleIcon} from '$lib';
 </script>
 
-<div class="navbar text-sm bg-base-100">
+<div class="navbar fixed z-50 text-sm bg-base-100 bg-transparent backdrop-filter backdrop-blur-md">
 	<div class="flex-1">
 		<a href="/" class="btn btn-ghost font-semibold">Filmio</a>
 	</div>

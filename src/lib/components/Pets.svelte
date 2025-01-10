@@ -1,9 +1,9 @@
 <script lang="ts">
+
 	import PetCard from './PetCard.svelte';
 
 	let { data } = $props();
 	console.log(data.upcomingMovies);
-	
 </script>
 
 <section class="container">

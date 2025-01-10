@@ -2,7 +2,8 @@
 	import PrimaryBtn from '$components/PrimaryBtn.svelte';
 
 	let { movie } = $props();
-	const randomText = '';
+	const randomText =
+		'With his wife out sick, a struggling father brings home a lifelike AI, only to have his self-aware new help want everything her new family has to offer... Like the affection of her owner and she';
 </script>
 
 <div class="card mx-auto mt-5 w-96 bg-base-100 shadow-xl">
