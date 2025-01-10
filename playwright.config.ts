@@ -22,21 +22,17 @@ export default defineConfig({
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
-	// reporter: 'html', -> commented by me
+	reporter: 'html',
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Base URL to use in actions like `await page.goto('/')`. */
-		baseURL: 'http://localhost:5173',
-		// -> process.env.PUBLIC_ROOT_URL = hit this production deployment and run the tests there,and tell me if the actual app works
-
-		// launchOptions: {
-		// 	slowMo: parseInt(process.env.SLOW_MO || '0') //added by me
-		// },
+		baseURL: 'http://localhost:5173/',
 
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-		trace: 'on-first-retry',
-		video: 'retain-on-failure' // added by me ->every time a test fails u will have a video to see what ur app like
+		trace: 'on-first-retry'
 	},
+
+	timeout: 120_000,
 
 	/* Configure projects for major browsers */
 	projects: [
@@ -50,7 +46,6 @@ export default defineConfig({
 			use: { ...devices['Desktop Firefox'] }
 		}
 
-		//commented because i dont want to test in safari browser
 		// {
 		// 	name: 'webkit',
 		// 	use: { ...devices['Desktop Safari'] }
@@ -80,7 +75,6 @@ export default defineConfig({
 	/* Run your local dev server before starting the tests */
 	webServer: {
 		command: 'pnpm run dev',
-		// url: 'http://127.0.0.1:3000',
 		port: 5173,
 		reuseExistingServer: !process.env.CI
 	}

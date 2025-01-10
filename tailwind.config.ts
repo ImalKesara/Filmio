@@ -33,8 +33,8 @@ export default {
 	daisyui: {
 		// ... mean access all properties
 		themes: [
-			{ light: { ...themes.valentine, ...themesOverride } },
-			{ dark: { ...themes.dracula, ...themesOverride } }
+			{ light: { ...themes.lofi, ...themesOverride } },
+			{ dark: { ...themes.luxury, ...themesOverride } }
 		]
 	},
 
