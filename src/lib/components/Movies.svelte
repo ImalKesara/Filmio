@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import PetCard from './PetCard.svelte';
+	import PetCard from './MovieCard.svelte';
 
 	let { data } = $props();
 	console.log(data.upcomingMovies);
