@@ -10,10 +10,15 @@ export interface Movie {
 	vote_count?: number; // Optional
 }
 
-export interface UpcomingMoviesResponse {
-	upcomingMovies: Movie[];
+export interface Meta {
+	title: string;
+	description: string;
 }
 
+export interface UpcomingMoviesResponse {
+	upcomingMovies: Movie[];
+	meta: Meta;
+}
 
 export const getAllUpcomingMovies = async (
 	fetch: typeof globalThis.fetch,

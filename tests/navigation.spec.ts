@@ -6,7 +6,7 @@ test('navigation smoke test', async ({ page }) => {
 	await expect(page).toHaveTitle('Filmio');
 	await expect(page.getByRole('heading', { name: 'Upcoming Movies', level: 1 })).toBeVisible();
 
-	await page.getByRole('link', { name: 'contact' }).click();
+	await page.getByRole('link', { name: 'Contact' }).click();
 	await expect(page).toHaveTitle('Contact');
 	await expect(page.getByRole('heading', { name: 'Find me on socials', level: 1 })).toBeVisible();
 });

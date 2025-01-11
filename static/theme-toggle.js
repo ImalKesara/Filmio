@@ -6,10 +6,17 @@ const defaultTheme = 'dark';
 
 const getTheme = () => {
 	if (typeof localStorage !== 'undefined') {
-		return localStorage.getItem(STORAGE_KEY) || defaultTheme;
+		if (localStorage.getItem(STORAGE_KEY)) {
+			return localStorage.getItem(STORAGE_KEY);
+		} else {
+			return window.matchMedia('(prefers-colors-scheme:dark)').matches ? 'dark' : 'light';
+		}
 	}
 	return defaultTheme;
 };
+
+// window.matchMedia('(prefers-colors-scheme:dark)').matches ? 'dark' : 'light'; -> use when you need to set dark theme default in getTheme()
+// 03:52 palina puppers video
 
 const setTheme = (theme) => {
 	document.documentElement.dataset.theme = theme;

@@ -19,6 +19,7 @@
 		<p class="text-sm">
 			{movie.overview === '' ? randomText : movie.overview.slice(0, 100) + '...'}
 		</p>
+
 		<div class="card-actions">
 			<PrimaryBtn class="btn btn-primary shadow-md ">Watch</PrimaryBtn>
 		</div>
