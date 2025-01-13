@@ -20,6 +20,8 @@ export interface UpcomingMoviesResponse {
 	meta: Meta;
 }
 
+
+
 export const getAllUpcomingMovies = async (
 	fetch: typeof globalThis.fetch,
 	locals: { API_KEY: string }
@@ -33,17 +35,15 @@ export const getAllUpcomingMovies = async (
 			}
 		};
 
-		const response = await fetch(
-			`https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1}`,
-			options
-		);
+		// const url = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
+		const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?page=${1}`, options);
 
 		if (!response.ok) {
 			console.log('something wrong with API');
 		}
 
 		const resData = await response.json();
-		return resData['results'];
+		return resData;
 	} catch (error) {
 		console.log(error);
 		throw new Error('Something went wrong');

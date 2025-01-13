@@ -9,7 +9,7 @@ const getTheme = () => {
 		if (localStorage.getItem(STORAGE_KEY)) {
 			return localStorage.getItem(STORAGE_KEY);
 		} else {
-			return window.matchMedia('(prefers-colors-scheme:dark)').matches ? 'dark' : 'light';
+			return window.matchMedia('(prefers-colors-scheme:dark)').matches ? 'light' : 'dark';
 		}
 	}
 	return defaultTheme;
