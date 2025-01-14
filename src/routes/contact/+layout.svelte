@@ -22,8 +22,6 @@
 	<title>{title}</title>
 </svelte:head>
 
-<Header />
 <main class="mt-16">
 	{@render children()}
 </main>
-<Footer />

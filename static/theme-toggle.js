@@ -2,14 +2,14 @@
 const STORAGE_KEY = 'theme';
 
 // default to dark mode, because **I** like it more :-)
-const defaultTheme = 'dark';
+const defaultTheme = 'light';
 
 const getTheme = () => {
 	if (typeof localStorage !== 'undefined') {
 		if (localStorage.getItem(STORAGE_KEY)) {
 			return localStorage.getItem(STORAGE_KEY);
 		} else {
-			return window.matchMedia('(prefers-colors-scheme:dark)').matches ? 'light' : 'dark';
+			return window.matchMedia('(prefers-colors-scheme:dark)').matches ? 'dark' : 'light';
 		}
 	}
 	return defaultTheme;

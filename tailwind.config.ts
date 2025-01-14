@@ -17,7 +17,8 @@ export default {
 	theme: {
 		fontFamily: {
 			sans: [...fontFamily.sans],
-			serif: ['var(--font-serif)', ...fontFamily.serif]
+			serif: ['var(--font-serif)', ...fontFamily.serif],
+			fancy: 'var(--font-fancy)'
 		},
 
 		container: {
