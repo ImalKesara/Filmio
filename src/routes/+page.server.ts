@@ -6,7 +6,7 @@ export const load: PageServerLoad = async ({ fetch, locals }) => {
 
 	const upcomingMovies = await getAllUpcomingMovies(fetch, locals);
 	const meta = {
-		title: 'Filmio',
+		title: 'filmio',
 		description: 'Landing page'
 	};
 

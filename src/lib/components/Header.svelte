@@ -2,7 +2,7 @@
 	import { ThemeToggleIcon } from '$lib';
 </script>
 
-<div class="navbar fixed z-50 bg-base-100 bg-transparent text-sm backdrop-blur-md backdrop-filter">
+<header class="navbar sticky top-0 z-50 bg-base-100 bg-base-100/50 backdrop-blur">
 	<div class="flex-1">
 		<a href="/" class="btn btn-ghost font-semibold">Filmio</a>
 	</div>
@@ -16,4 +16,10 @@
 			</li>
 		</ul>
 	</div>
-</div>
+</header>
+
+<style>
+	header {
+		view-transition-name: header;
+	}
+</style>

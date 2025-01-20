@@ -1,6 +1,9 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 declare global {
+	interface Document {
+		startViewTransition?(callback: () => Promise<void>): void;
+	}
 	interface Window {
 		toggleTheme?(): void;
 	}

@@ -2,19 +2,20 @@
 	import { page } from '$app/stores';
 	import { Header, Footer } from '$lib';
 	import type { Snippet } from 'svelte';
+	import '../../app.css'
 
 	type Props = {
 		children: Snippet;
 	};
 
 	const defaultMeta = {
-		title: 'Filmio',
-		description: 'Filmio  Movies'
+		title: 'filmio',
+		description: 'filmio  Movies'
 	};
 
 	let { children }: Props = $props();
 	let title = $derived(
-		$page.data.meta?.title ? `${$page.data.meta.title} | Filmio` : defaultMeta.title
+		$page.data.meta?.title ? `${$page.data.meta.title} | filmio` : defaultMeta.title
 	);
 </script>
 
