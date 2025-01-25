@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('navigation smoke test', async ({ page }) => {
 	await page.goto('/');
+	await expect(page.getByTestId('hydrated')).toBeVisible();
 
 	await expect(page).toHaveTitle('filmio');
 	await expect(page.getByRole('heading', { name: 'Upcoming Movies', level: 1 })).toBeVisible();

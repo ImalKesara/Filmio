@@ -25,6 +25,9 @@
 			});
 		}
 	});
+	$effect(() => {
+		document.documentElement.dataset.testid = 'hydrated';
+	});
 </script>
 
 <svelte:head>
