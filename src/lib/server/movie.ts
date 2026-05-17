@@ -1,3 +1,5 @@
+import { TMDB_API_KEY } from '$env/static/private';
+
 export interface Movie {
 	poster_path: string | null; // It might be null if no poster is available
 	title: string;
@@ -20,23 +22,21 @@ export interface UpcomingMoviesResponse {
 	meta: Meta;
 }
 
-
-
-export const getAllUpcomingMovies = async (
-	fetch: typeof globalThis.fetch,
-	locals: { API_KEY: string }
-) => {
+export const getAllUpcomingMovies = async (pageNumber: number) => {
 	try {
 		const options = {
 			method: 'GET',
 			headers: {
 				accept: 'application/json',
-				Authorization: `Bearer ${locals.API_KEY}`
+				Authorization: `Bearer ${TMDB_API_KEY}`
 			}
 		};
 
 		// const url = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
-		const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?page=${1}`, options);
+		const response = await fetch(
+			`https://api.themoviedb.org/3/movie/upcoming?page=${pageNumber}`,
+			options
+		);
 
 		if (!response.ok) {
 			console.log('something wrong with API');
@@ -47,7 +47,6 @@ export const getAllUpcomingMovies = async (
 	} catch (error) {
 		console.log(error);
 		throw new Error('Something went wrong');
-		return [];
 	} finally {
 		console.log('Operation is successfully');
 	}

@@ -1,16 +1,16 @@
 <script lang="ts">
 	// Supports weights 300-800
 	import '@fontsource-variable/shantell-sans';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import '../app.css';
 	import { Header, Footer } from '$lib';
 	import { onNavigate } from '$app/navigation';
 
 	let { children } = $props();
-	let title = $derived($page.data.meta?.title ? `${$page.data.meta.title}` : `filmio`);
+	let title = $derived(page.data.meta?.title ? `${page.data.meta.title}` : `filmio`);
 
-	/* 
-		View transitions 
+	/*
+		View transitions
 		Default Transition (Fade) , some browsers are not supported yet (firefox,safari) so that's we use if condition
 		navigation.from?.route.id !== navigation.to?.route.id -> works when stay in same url
 	*/
@@ -34,7 +34,9 @@
 	<title>{title}</title>
 </svelte:head>
 <Header />
-{@render children()}
+<main class="mx-auto max-w-6xl">
+	{@render children()}
+</main>
 <Footer />
 
 <style>
