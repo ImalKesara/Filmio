@@ -5,9 +5,13 @@
 </script>
 
 <div class="join mt-6 flex items-center justify-center">
-	<a href={`?page=${currentPage - 1}`} class="btn btn-square join-item">Prev</a>
+	<div class="join">
+		<a href={`?page=${currentPage - 1}`} class="join-item btn">«</a>
 
-	<Button>{currentPage}</Button>
+		<!-- <Button class="join-item btn">Page {currentPage}</Button> -->
 
-	<a href={`?page=${currentPage + 1}`} class="btn btn-square join-item">Next</a>
+		<button class="join-item btn">Page {currentPage}</button>
+
+		<a href={`?page=${currentPage + 1}`} class="join-item btn">»</a>
+	</div>
 </div>

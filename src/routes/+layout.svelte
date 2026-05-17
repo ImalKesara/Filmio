@@ -5,6 +5,7 @@
 	import '../app.css';
 	import { Header, Footer } from '$lib';
 	import { onNavigate } from '$app/navigation';
+	import { navigating } from '$app/state';
 
 	let { children } = $props();
 	let title = $derived(page.data.meta?.title ? `${page.data.meta.title}` : `filmio`);
@@ -14,6 +15,7 @@
 		Default Transition (Fade) , some browsers are not supported yet (firefox,safari) so that's we use if condition
 		navigation.from?.route.id !== navigation.to?.route.id -> works when stay in same url
 	*/
+
 	onNavigate((navigation) => {
 		if (document.startViewTransition && navigation.from?.route.id !== navigation.to?.route.id) {
 			return new Promise((resolve) => {
@@ -35,7 +37,13 @@
 </svelte:head>
 <Header />
 <main class="mx-auto max-w-6xl">
-	{@render children()}
+	{#if navigating.type}
+		<div class="flex h-full items-center justify-center">
+			<span class="loading loading-spinner text-primary"></span>
+		</div>
+	{:else}
+		{@render children()}
+	{/if}
 </main>
 <Footer />
 
